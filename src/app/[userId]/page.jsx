@@ -35,7 +35,7 @@ const User = ({ params }) => {
   }, [params.userId]);
 
   return (
-    <div className="p-4 max-h-[100vh] overflow-scroll w-full bg-slate-100">
+    <div className="p-4 max-h-[100vh] overflow-scroll hide-scrollbar w-full bg-slate-100">
       {loading ? (
         <LoadingPage />
       ) : (

@@ -35,9 +35,7 @@ const UserDetails = ({ user }) => {
                 </div>
 
 
-                <div className="mt-4 text-center">
-                    <p className="text-sm text-gray-500">{user?.fullAddress}</p>
-                </div>
+           
             </div>
 
 

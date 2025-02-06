@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const UserCard = ({ data }) => {
     return (
-        <div className="mt-5 flex flex-col justify-center px-2 sm:px-6 md:px-5 lg:px-5 rounded-lg w-full p-3 border hover:shadow-lg hover:border-slate-400 border-slate-300">
+        <Link href={`/${data?.id}`} className="mt-5 flex flex-col justify-center px-2 sm:px-6 md:px-5 lg:px-5 rounded-lg w-full p-3 border hover:shadow-lg hover:border-slate-400 border-slate-300">
 
             <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
@@ -35,7 +35,7 @@ const UserCard = ({ data }) => {
                <Link href={`/${data?.id}`}> <CiShare1 title="Share" size={20} className=" transition-all hover:rounded-full hover:scale-110" /></Link>
             </div>
 
-        </div>
+        </Link>
     );
 }
 
