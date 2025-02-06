@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import UserCard from "./components/UserCard";
 import { BsSearch } from "react-icons/bs";
 import LoadingPage from "./components/LoadingPage";
+import toast from "react-hot-toast";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -15,7 +16,9 @@ export default function Home() {
       setLoading(true);
       const res = await axios.get("https://jsonplaceholder.typicode.com/users");
       setData(res.data);
+      toast.success("All Users")
     } catch (error) {
+      toast.error(error.message)
       console.error(error);
     } finally {
       setLoading(false);
